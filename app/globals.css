@@ -1,26 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fbfaf8;
+  --foreground: #2d262d;
+  
+  --brand-primary: #3e0d4e;
+  --brand-primary-rgb: 62, 13, 78;
+  --brand-secondary: #4a6b5d;
+  --brand-secondary-rgb: 74, 107, 93;
+  --brand-accent: #78909c;
+  --brand-cream: #fbfaf8;
+  --brand-lavender: #f5f2f9;
+  --brand-soft-rose: #ecdac9;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@theme {
+  --color-brand-primary: var(--brand-primary);
+  --color-brand-secondary: var(--brand-secondary);
+  --color-brand-accent: var(--brand-accent);
+  --color-brand-cream: var(--brand-cream);
+  --color-brand-lavender: var(--brand-lavender);
+  --color-brand-rose: var(--brand-soft-rose);
+  
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  overflow-x: hidden;
 }
+
+/* Custom Soothing Animations and Utilities */
+.glass {
+  background: rgba(251, 250, 248, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(62, 13, 78, 0.06);
+}
+
+.glass-dark {
+  background: rgba(45, 38, 45, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(251, 250, 248, 0.08);
+}
+
+/* Subtle breathing glow animation for background decoration */
+@keyframes breathe {
+  0%, 100% {
+    transform: scale(1) translate(0px, 0px);
+    opacity: 0.4;
+  }
+  33% {
+    transform: scale(1.1) translate(30px, -50px);
+    opacity: 0.6;
+  }
+  66% {
+    transform: scale(0.95) translate(-20px, 20px);
+    opacity: 0.35;
+  }
+}
+
+.animate-breathe-slow {
+  animation: breathe 15s infinite ease-in-out;
+}
+
+.animate-breathe-slower {
+  animation: breathe 22s infinite ease-in-out reverse;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--brand-cream);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(62, 13, 78, 0.15);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(62, 13, 78, 0.3);
+}
+
