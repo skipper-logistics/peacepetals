@@ -58,7 +58,7 @@ export default function Header() {
           </a>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-6">
             <a
               href="#services"
               className="text-sm font-medium text-foreground/80 hover:text-brand-primary transition-colors"
@@ -82,6 +82,19 @@ export default function Header() {
               className="text-sm font-medium text-foreground/80 hover:text-brand-primary transition-colors"
             >
               Contact
+            </a>
+            <a
+              href="https://www.instagram.com/peacepetals_counseling?igsh=MTVicXRmaHMxbmozYg=="
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-foreground/80 hover:text-brand-primary transition-colors p-2 rounded-full hover:bg-brand-primary/5 flex items-center justify-center"
+              aria-label="Instagram Page"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+              </svg>
             </a>
             <a
               href="#book"
@@ -141,9 +154,22 @@ export default function Header() {
             Contact Info
           </a>
           <a
+            href="https://www.instagram.com/peacepetals_counseling?igsh=MTVicXRmaHMxbmozYg=="
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center gap-2 w-full py-3 rounded-lg border border-brand-primary/20 text-foreground/85 font-medium transition-colors hover:bg-brand-primary/5"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 text-brand-primary">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+            </svg>
+            Follow on Instagram
+          </a>
+          <a
             href="#book"
             onClick={() => setIsOpen(false)}
-            className="flex items-center justify-center gap-2 w-full py-3 rounded-full bg-brand-primary text-white font-medium transition-colors hover:bg-brand-primary/95 mt-2"
+            className="flex items-center justify-center gap-2 w-full py-3 rounded-full bg-brand-primary text-white font-medium transition-colors hover:bg-brand-primary/95 mt-1"
           >
             <Calendar className="w-4 h-4" />
             Book Session

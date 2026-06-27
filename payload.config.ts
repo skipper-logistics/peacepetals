@@ -168,7 +168,7 @@ export default buildConfig({
         { filename: "peacepetalssampleimg4.jpeg", alt: "The Healing Garden Terrace" }
       ];
 
-      const createdMedia: any[] = [];
+      const createdMedia = [];
       
       for (const item of mediaList) {
         try {

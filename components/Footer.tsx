@@ -46,6 +46,21 @@ export default function Footer() {
             <p className="text-sm text-brand-cream/75 leading-relaxed font-light">
               Nurturing mental clarity, emotional resilience, and spiritual grounding. A safe harbor for your personal growth.
             </p>
+            <div className="flex gap-4">
+              <a
+                href="https://www.instagram.com/peacepetals_counseling?igsh=MTVicXRmaHMxbmozYg=="
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full border border-white/15 flex items-center justify-center text-brand-cream hover:bg-brand-rose hover:text-white hover:border-brand-rose transition-all duration-300"
+                aria-label="Instagram"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+                </svg>
+              </a>
+            </div>
           </div>
 
           {/* Column 2: Navigation Links */}
