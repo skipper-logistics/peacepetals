@@ -4,6 +4,7 @@ import path from "path";
 import { buildConfig } from "payload";
 import { fileURLToPath } from "url";
 
+import { migrations } from "./migrations";
 import { Users } from "./collections/Users";
 import { Media } from "./collections/Media";
 import { Services } from "./collections/Services";
@@ -25,7 +26,7 @@ export default buildConfig({
   editor: lexicalEditor({}),
   secret: process.env.PAYLOAD_SECRET || "fallback-secret-key-peacepetal-38291",
   db: postgresAdapter({
-    push: true,
+    prodMigrations: migrations,
     pool: {
       connectionString: process.env.DATABASE_URI || process.env.DATABASE_URL || "",
     },
