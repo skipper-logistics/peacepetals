@@ -25,6 +25,7 @@ export default buildConfig({
   editor: lexicalEditor({}),
   secret: process.env.PAYLOAD_SECRET || "fallback-secret-key-peacepetal-38291",
   db: postgresAdapter({
+    push: true,
     pool: {
       connectionString: process.env.DATABASE_URI || process.env.DATABASE_URL || "",
     },
