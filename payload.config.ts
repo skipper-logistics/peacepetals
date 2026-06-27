@@ -26,7 +26,7 @@ export default buildConfig({
   secret: process.env.PAYLOAD_SECRET || "fallback-secret-key-peacepetal-38291",
   db: postgresAdapter({
     pool: {
-      connectionString: process.env.DATABASE_URI || "",
+      connectionString: process.env.DATABASE_URI || process.env.DATABASE_URL || "",
     },
   }),
   async onInit(payload) {
